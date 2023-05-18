@@ -1,0 +1,17 @@
+# Maintainer: Bruno Goncalves <bigbruno@gmail.com>
+
+pkgname=biglinux-wallpapers-with-logo
+pkgver=$(date +%y.%m.%d)
+pkgrel=$(date +%H%M)
+arch=('any')
+license=('GPL')
+url="https://github.com/biglinux/biglinux-wallpapers-with-logo"
+pkgdesc="Wallpapers with BigLinux logo"
+source=("git+https://github.com/biglinux/biglinux-wallpapers-with-logo.git")
+md5sums=(SKIP)
+
+
+package() {
+    cp -r "${srcdir}/biglinux-wallpapers-with-logo/biglinux-wallpapers-with-logo/usr/" "${pkgdir}/"
+}
+
